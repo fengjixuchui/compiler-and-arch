@@ -4,7 +4,7 @@
 
 A list of awesome compilers and optimization techniques (applicable to compilers) for different architectures and emerging domains.
 
->Note: Although some projects are not about compiler design or implementation themselves, we still include them once their techniques are suitable for automation and compiler design.
+>Note: Although some projects are not about compiler design or implementation themselves, we still include them if their techniques are suitable for automation and compiler design.
 
 ## Contents
 
@@ -35,9 +35,10 @@ A list of awesome compilers and optimization techniques (applicable to compilers
     - DAC, ICLR, NeurIPS, ATC, OOPSLA
     - CGO, MLSys, SIGGRAPH, PACT, POPL, ICS
     - Euro-Par
+    - ICRC
 - Journals
     - TPDS, TCAD, TC
-    - TACO
+    - TACO, TECS
 - Preprint
     - arXiv
 
@@ -61,7 +62,6 @@ A list of awesome compilers and optimization techniques (applicable to compilers
     - [TensorIR: An Abstraction for Automatic Tensorized Program Optimization](https://arxiv.org/abs/2207.04296). **arXiv 2022**. Siyuan Feng, Bohan Hou, Hongyi Jin, Wuwei Lin, Junru Shao, Ruihang Lai, Zihao Ye, Lianmin Zheng, Cody Hao Yu, Yong Yu, Tianqi Chen. _Shanghai Jiao Tong University_.
     - [AMOS: enabling automatic mapping for tensor computations on spatial accelerators with hardware abstraction](https://dl.acm.org/doi/abs/10.1145/3470496.3527440) **ISCA 2022**. [code](https://github.com/KnowingNothing/AMOS). Size Zheng, Renze Chen, Anjiang Wei, Yicheng Jin, Qin Han, Liqiang Lu, Bingyang Wu, Xiuhong Li, Shengen Yan, Yun Liang. _Peking University_.
     - [UNIT: Unifying Tensorized Instruction Compilation](https://polyarch.cs.ucla.edu/papers/cgo2021-unit.pdf) **CGO 2021**. [code](https://github.com/were/UNIT). Jian Weng, Animesh Jain, Jie Wang, Leyuan Wang, Yida Wang, Tony Nowatzki. _University of California, Los Angeles_.
-    - [VeGen: A Vectorizer Generator for SIMD and Beyond](https://dl.acm.org/doi/10.1145/3445814.3446692) **ASPLOS 2021**. [code](https://github.com/ychen306/vegen). Yishen Chen, Charith Mendis, Michael Carbin, Saman P. Amarasinghe. _MIT CSAIL_.
 
 - Polyhedral Optimization
     - [AKG: automatic kernel generation for neural processing units using polyhedral transformations](https://dl.acm.org/doi/abs/10.1145/3453483.3454106) **PLDI 2021**. [code](https://github.com/mindspore-ai/akg). Jie Zhao, Bojie Li, Wang Nie, Zhen Geng, Renwei Zhang, Xiong Gao, Bin Cheng, Chen Wu, Yun Cheng, Zheng Li, Peng Di, Kun Zhang, Xuefeng Jin. _State Key Laboratory of Mathematical Engineering and Advanced Computing, China_.
@@ -70,6 +70,12 @@ A list of awesome compilers and optimization techniques (applicable to compilers
 
 ## Compilers for PIM
 
+- Software & Hardware Co-Design
+    - [Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning](http://sitaohuang.com/publications/2018_icrc_analog_ml.pdf) **ICRC 2018**. Ambrosi, Joao and Ankit, Aayush and Antunes, Rodrigo and Chalamalasetti, Sai Rahul and Chatterjee, Soumitra and El Hajj, Izzat and Fachini, Guilherme and Faraboschi, Paolo and Foltin, Martin and Huang, Sitao. _Hewlett Packard Enterprise_.
+    - [SIAM: Chiplet-based Scalable In-Memory Acceleration with Mesh for Deep Neural Networks](https://arxiv.org/pdf/2108.08903.pdf) **TECS 2021**. [code](https://github.com/gkrish19/SIAM-Chiplet-based-Scalable-In-Memory-Acceleration-with-Mesh-for-Deep-Neural-Networks). Krishnan, Gokul and Mandal, Sumit K and Pannala, Manvitha and Chakrabarti, Chaitali and Seo, Jae-Sun and Ogras, Umit Y and Cao, Yu. _Arizona State University_.
+
+- End2End Compiler
+    - [OCC: An Automated End-to-End Machine Learning Optimizing Compiler for Computing-In-Memory](https://grosser.science/static/bd7e99f44a1eb746980f3c84ec961858/2107_Khan_TCAD.pdf) **TCAD 2021**. [code](https://github.com/adam-smnk/Open-CIM-Compiler). Siemieniuk, Adam and Chelini, Lorenzo and Khan, Asif Ali and Castrillon, Jeronimo and Drebes, Andi and Corporaal, Henk and Grosser, Tobias and Kong, Martin.  
 
 ## Compilers for Brain-inspired Hardware
 
@@ -120,14 +126,69 @@ A list of awesome compilers and optimization techniques (applicable to compilers
     - [VirtualFlow: Decoupling Deep Learning Models from the Underlying Hardware](https://proceedings.mlsys.org/paper/2022/hash/2723d092b63885e0d7c260cc007e8b9d-Abstract.html) **MLSys 2022**. Andrew Or, Haoyu Zhang, Michael None Freedman. _Princeton University_.
     - [OneFlow: Redesign the Distributed Deep Learning Framework from Scratch](https://arxiv.org/abs/2110.15032) **arXiv 2021**. Jinhui Yuan, Xinqi Li, Cheng Cheng, Juncheng Liu, Ran Guo, Shenghang Cai, Chi Yao, Fei Yang, Xiaodong Yi, Chuan Wu, Haoran Zhang, Jie Zhao. _OneFlow Research_.
 
-
 ## Compilers for CPU
 
++ Vectorization Optimization
+  + [All you need is superword-level parallelism: systematic control-flow vectorization with SLP](https://dl.acm.org/doi/abs/10.1145/3519939.3523701) **PLDI 2022**. Yishen Chen, Charith Mendis, and Saman Amarasinghe.
+  + [VeGen: a vectorizer generator for SIMD and beyond](https://dl.acm.org/doi/abs/10.1145/3445814.3446692) **ASPLOS 2021**. Yishen Chen, Charith Mendis, Michael Carbin, and Saman Amarasinghe.
+  + [NeuroVectorizer: end-to-end vectorization with deep reinforcement learning](https://dl.acm.org/doi/abs/10.1145/3368826.3377928) **CGO 2020**. Ameer Haj-Ali, Nesreen K. Ahmed, Ted Willke, Yakun Sophia Shao, Krste Asanovic, and Ion Stoica.
+  + [Compiler Auto-Vectorization with Imitation Learning](https://proceedings.neurips.cc/paper/2019/hash/d1d5923fc822531bbfd9d87d4760914b-Abstract.html) **NIPS 2019**. Charith Mendis, Cambridge Yang, Yewen Pu, Dr.Saman Amarasinghe, Michael Carbin. 
+  + [Translating Traditional SIMD Instructions to Vector Length Agnostic Architectures](https://ieeexplore.ieee.org/abstract/document/8661195) **CGO 2019**. Fu, Sheng-Yu and Hsu, Wei-Chung. 
+  + [Extending LLVM for Lightweight SPMD Vectorization: Using SIMD and Vector Instructions Easily from Any Language](https://ieeexplore.ieee.org/abstract/document/8661165/) **CGO 2019**. Kruppe, Robin and Oppermann, Julian and Sommer, Lukas and Koch, Andreas.
+  + [Super-Node SLP: Optimized Vectorization for Code Sequences Containing Operators and Their Inverse Elements](https://ieeexplore.ieee.org/abstract/document/8661192/) **CGO 2019**. V. Porpodas, R. C. O. Rocha, E. Brevnov, L. F. W. Góes and T. Mattson.
+  + [Partial control-flow linearization](https://dl.acm.org/doi/abs/10.1145/3296979.3192413) **PLDI 2018**. Moll, Simon and Hack, Sebastian. 
+  + [Look-ahead SLP: auto-vectorization in the presence of commutative operations](https://dl.acm.org/doi/abs/10.1145/3168807) **CGO 2018**. Vasileios Porpodas, Rodrigo C. O. Rocha, and Luís F. W. Góes.
++ Parallelism and Locality Optimization
+  + [Analytical characterization and design space exploration for optimization of CNNs](https://dl.acm.org/doi/10.1145/3445814.3446759) **ASPLOS 2021**. Rui Li, Yufan Xu, Aravind Sukumaran-Rajam, Atanas Rountev, P. Sadayappan.
+  + [AutoTM: Automatic Tensor Movement in Heterogeneous Memory Systems using Integer Linear Programming](https://dl.acm.org/doi/abs/10.1145/3373376.3378465) **ASPLOS 2020**. Mark Hildebrand, Jawad Khan, Sanjeev Trika, Jason Lowe-Power, and Venkatesh Akella.
+  + [T4: Compiling Sequential Code for Effective Speculative Parallelization in Hardware](https://ieeexplore.ieee.org/abstract/document/9138940) **ISCA 2020**. Ying, Victor A. and Jeffrey, Mark C. and Sanchez, Daniel.
+  + [Optimizing data-intensive computations in existing libraries with split annotations](https://dl.acm.org/doi/abs/10.1145/3341301.3359652) **SOSP 2019**. Palkar, Shoumik and Zaharia, Matei.
+  + [Model-driven transformations for multi- and many-core CPUs](https://dl.acm.org/doi/abs/10.1145/3314221.3314653) **PLDI 2019**. Kong, Martin and Pouchet, Louis-Noel. 
++ Compilers for Sparse Workloads
+  + [Efficient Execution of Graph Algorithms on CPU with SIMD Extensions](https://ieeexplore.ieee.org/abstract/document/9370326/) **CGO 2021**. Zheng, Ruohuang and Pai, Sreepathi. 
+  + [Generating piecewise-regular code from irregular structures](https://dl.acm.org/doi/abs/10.1145/3314221.3314615) **PLDI 2019**. Travis Augustine, Janarthanan Sarma, Louis-Noël Pouchet, and Gabriel Rodríguez.
+  + [CVR: efficient vectorization of SpMV on x86 processors](https://dl.acm.org/doi/abs/10.1145/3168818) **CGO 2018**. Biwei Xie, Jianfeng Zhan, Xu Liu, Wanling Gao, Zhen Jia, Xiwen He, and Lixin Zhang.
++ Compilers for Dense Workloads
+  + [Optimizing N-dimensional, winograd-based convolution for manycore CPUs](https://dl.acm.org/doi/abs/10.1145/3178487.3178496) **PPoPP 2018**. Zhen Jia, Aleksandar Zlateski, Fredo Durand, and Kai Li.
+  + [SIMD code generation for stencils on brick decompositions](https://dl.acm.org/doi/abs/10.1145/3200691.3178537) **PPoPP 2018**. Tuowen Zhao, Mary Hall, Protonu Basu, Samuel Williams, and Hans Johansen.
+  + [Program generation for small-scale linear algebra applications](https://dl.acm.org/doi/abs/10.1145/3168812) **CGO 2018**. Daniele G. Spampinato, Diego Fabregat-Traver, Paolo Bientinesi, and Markus Püschel.
+
++ Compilers for End-to-End Networks
+  + [SPNC: An Open-Source MLIR-Based Compiler for Fast Sum-Product Network Inference on CPUs and GPUs](https://ieeexplore.ieee.org/abstract/document/9741277/) **CGO 2022**. Sommer, Lukas and Axenie, Cristian and Koch, Andreas.
+  + [Multi-target Compiler for the Deployment of Machine Learning Models](https://ieeexplore.ieee.org/abstract/document/8661199) **CGO 2019**. Castro-Lopez, Oscar and Vega-Lopez, Ines F.
 
 ## Compilers for Mobile and Edge
 
++ Compilers for Intermittent Devices
+  + [WARio: efficient code generation for intermittent computing](https://dl.acm.org/doi/abs/10.1145/3519939.3523454) **PLDI 2022**. Vito Kortbeek, Souradip Ghosh, Josiah Hester, Simone Campanoni, and Przemysław Pawełczak.
+  + [Time-sensitive Intermittent Computing Meets Legacy Software](https://dl.acm.org/doi/abs/10.1145/3373376.3378476) **ASPLOS 2020**. Vito Kortbeek, Kasim Sinan Yildirim, Abu Bakar, Jacob Sorber, Josiah Hester, and Przemysław Pawełczak.
+  + [Adaptive low-overhead scheduling for periodic and reactive intermittent execution](https://dl.acm.org/doi/abs/10.1145/3385412.3385998) **PLDI 2020**. Kiwan Maeng and Brandon Lucia.
+  + [Intelligence Beyond the Edge: Inference on Intermittent Embedded Systems](https://dl.acm.org/doi/abs/10.1145/3297858.3304011) **ASPLOS 2019**. Graham Gobieski, Brandon Lucia, and Nathan Beckmann.
+  + [Supporting peripherals in intermittent systems with just-in-time checkpoints](https://dl.acm.org/doi/abs/10.1145/3314221.3314613) **PLDI 2019**. Kiwan Maeng and Brandon Lucia.
++ Compilers for Digital Signal Processors
+  + [Vector instruction selection for digital signal processors using program synthesis](https://dl.acm.org/doi/abs/10.1145/3503222.3507714) **ASPLOS 2022**. Maaz Bin Safeer Ahmad, Alexander J. Root, Andrew Adams, Shoaib Kamil, and Alvin Cheung.
+  + [Vectorization for digital signal processors via equality saturation](https://dl.acm.org/doi/abs/10.1145/3445814.3446707) **ASPLOS 2021**. Alexa VanHattum, Rachit Nigam, Vincent T. Lee, James Bornholt, and Adrian Sampson.
++ Optimization for On-device Learning
+  + [POET: Training Neural Networks on Tiny Devices with Integrated Rematerialization and Paging](https://proceedings.mlr.press/v162/patil22b.html) **ICML 2022**. Shishir G. Patil, Paras Jain, Prabal Dutta, Ion Stoica, Joseph Gonzalez.
+  + [ZeroFL: Efficient On-Device Training for Federated Learning with Local Sparsity](https://arxiv.org/abs/2208.02507) **ICLR 2022**. Xinchi Qiu, Javier Fernandez-Marques, Pedro PB Gusmao, Yan Gao, Titouan Parcollet, Nicholas Donald Lane. 
+  + [Distributed Distillation for On-Device Learning](https://proceedings.neurips.cc/paper/2020/hash/fef6f971605336724b5e6c0c12dc2534-Abstract.html) **NIPS 2020**. Ilai Bistritz, Ariana Mann, Nicholas Bambos.
+  + [E2-Train: Training State-of-the-art CNNs with Over 80% Energy Savings](https://proceedings.neurips.cc/paper/2019/hash/663772ea088360f95bac3dc7ffb841be-Abstract.html) **NIPS 2019**. Yue Wang, Ziyu Jiang, Xiaohan Chen, Pengfei Xu, Yang Zhao, Yingyan Lin, Zhangyang Wang.
++ Model Compression for Mobile Devices
+  + [PatDNN: Achieving Real-Time DNN Execution on Mobile Devices with Pattern-based Weight Pruning](https://dl.acm.org/doi/abs/10.1145/3373376.3378534) **ASPLOS 2020**. Wei Niu, Xiaolong Ma, Sheng Lin, Shihao Wang, Xuehai Qian, Xue Lin, Yanzhi Wang, and Bin Ren.
+  + [Compiling KB-sized machine learning models to tiny IoT devices](https://dl.acm.org/doi/abs/10.1145/3314221.3314597) **PLDI 2019**. Sridhar Gopinath, Nikhil Ghanathe, Vivek Seshadri, and Rahul Sharma.
+  + [Energy-Constrained Compression for Deep Neural Networks via Weighted Sparse Projection and Layer Input Masking](https://openreview.net/forum?id=BylBr3C9K7) **ICLR 2019**. Haichuan Yang, Yuhao Zhu, Ji Liu.
++ Optimization for Mobile Device Inference
+  + [Towards a Domain-Extensible Compiler: Optimizing an Image Processing Pipeline on Mobile CPUs](https://ieeexplore.ieee.org/abstract/document/9370337/) **CGO 2021**. Koehler, Thomas and Steuwer, Michel. 
+  + [AutoScale: Energy Efficiency Optimization for Stochastic Edge Inference Using Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/9251950/) **MICRO 2020**. Kim, Young Geun and Wu, Carole-Jean.
++ Neural Architecture Search for Mobile Devices
+  + [MCUNet: Tiny Deep Learning on IoT Devices](https://proceedings.neurips.cc/paper/2020/hash/86c51678350f656dcc7f490a43946ee5-Abstract.html) **NIPS 2020**. Ji Lin, Wei-Ming Chen, Yujun Lin, john cohn, Chuang Gan, Song Han.
+  + [Constrained deep neural network architecture search for IoT devices accounting for hardware calibration](https://proceedings.neurips.cc/paper/2019/hash/f8037f94e53f17a2cc301033ca86d278-Abstract.html) **NIPS 2019**. Florian Scheidegger, Luca Benini, Costas Bekas, A. Cristiano I. Malossi. 
 
 ## Compilers for RISC-V
+
+ - [MLIR: A Compiler Infrastructure for the End of Moore's Law](https://arxiv.org/abs/2002.11054) **arXiv 2020**, [Github Page](https://github.com/llvm/llvm-project.git). [Document Page](https://mlir.llvm.org/). Chris Lattner, Jacques A. Pienaar, Mehdi Amini, Uday Bondhugula, River Riddle, Albert Cohen, Tatiana Shpeisman, Andy Davis, Nicolas Vasilache, Oleksandr Zinenko. _Google_.
+ - [BUDDY MLIR: MLIR-Based Ideas Landing Project](https://github.com/buddy-compiler/buddy-mlir)
+
 
 
 ## Compilers for Configurable Hardware
@@ -156,6 +217,7 @@ A list of awesome compilers and optimization techniques (applicable to compilers
 
 ## Sparse Applications, Compilers, and Architectures
 - Compiler Design
+    - [SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning](https://arxiv.org/pdf/2207.04606.pdf) **arXiv 2022**. Zihao Ye, Ruihang Lai, Junru Shao, Tianqi Chen, Luis Ceze. _University of Washington_.
     - [Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model](http://tensor-compiler.org/files/ahrens-pldi22-taco-autoscheduling.pdf) **PLDI 2022**. Peter Ahrens, Fredrik Kjolstad, and Saman Amarasinghe. _MIT CSAIL_.
     - [Unified Compilation for Lossless Compression and Sparse Computing](https://groups.csail.mit.edu/commit/papers/2022/cgo22-TACO-lossless.pdf) **CGO 2022**. Daniel Donenfeld, Stephen Chou, and Saman Amarasinghe. _MIT CSAIL_.
     - [Dynamic Sparse Tensor Algebra Compilation](https://arxiv.org/abs/2112.01394) **arXiv 2021**. Stephen Chou and Saman Amarasinghe. _MIT CSAIL_.
